@@ -84,11 +84,11 @@ body{
   animation-iteration-count: infinite;
 }
 @keyframes zoom{
-  @%{
-    transition:scale(1);
+  0%{
+    transform:scale(1);
   }
   50%{
-    transition: scale(1,2) translateX(-5%);
+    transform: scale(1.2) translateX(-5%);
   }
   100%{
     transform: scale(1);
@@ -96,7 +96,7 @@ body{
 }
 
 .title-heading{
-  background: rgba(0,0,0,0.4);
+  background: rgba(255,255,255,0.4);
   border-left: 0.3rem solid var(--mainBlue);
 }
 
@@ -105,7 +105,7 @@ body{
   font-style: 1.9rem
 }
 
-@media screen and(min-width: 769px){
+@media screen and (min-width: 768px){
   .title{
     font-style: 3rem;
   }

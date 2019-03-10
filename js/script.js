@@ -25,7 +25,7 @@ const CreateCars = (() => {
   function produceCars() {
     makeCar('chevy','american');
     makeCar('mercedes','german','img/car-german-1.jpeg',true);
-    makeCar('bmw','german','img/car-german-2.jpeg',false);
+    makeCar('bmw','german','img/car-german-2.jpeg');
     makeCar('bmw','german','img/car-german-3.jpeg',false,'some model');
     makeCar('bmw','german','img/car-german-4.jpeg',undefined,'other model');
     makeCar('mercedes','german','img/car-german-5.jpeg',false);
@@ -69,6 +69,7 @@ const DisplaySpecialCars=((CreateCars) => {
   info.addEventListener('click',(event) => {
     if (event.target.parentElement.classList.contains('featured-icon')){
       const img = event.target.parentElement.dataset.img;
+      console.log(img);
       document.querySelector('.featured-photo').src=img;
     }
   })
